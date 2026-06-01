@@ -1,4 +1,4 @@
-# 🧪 SauceDemo Cypress Automation Suite - Clase 04
+# 🧪 SauceDemo Cypress Automation Suite - Clase 05
 
 [![Cypress](https://img.shields.io/badge/Cypress-170B3B?style=for-the-badge&logo=Cypress&logoColor=white)](https://www.cypress.io/)
 [![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://developer.mozilla.org/es/docs/Web/JavaScript)

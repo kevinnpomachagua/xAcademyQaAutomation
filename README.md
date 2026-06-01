@@ -59,3 +59,9 @@ Plaintext
 ├── cypress.config.js  # Archivo de configuración principal de Cypress
 ├── package.json       # Configuración de Node.js, dependencias y scripts de ejecución
 └── README.md          # Documentación del proyecto
+
+---
+
+## 📚 Tareas y Prácticas
+
+- **[Clase 05 - Práctica y Auditoría](./Clase%2005):** En esta carpeta se encuentra la resolución de la tarea correspondiente a la Clase 05, incluyendo escenarios de prueba E2E para inventario, carrito y checkout, junto a documentación y reporte de auditoría.

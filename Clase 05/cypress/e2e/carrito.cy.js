@@ -30,7 +30,7 @@ describe('Carrito', () => {
         cy.get('[data-test="remove-sauce-labs-onesie"]').should('have.text', 'Remove')
     })
 
-    it.only('T12 Eliminar un producto desde la página del carrito', () => {
+    it('T12 Eliminar un producto desde la página del carrito', () => {
         cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
         cy.get('[data-test="add-to-cart-sauce-labs-bike-light"]').click()
 

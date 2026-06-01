@@ -20,7 +20,7 @@ describe('Checkout', () => {
         cy.get('[data-test="complete-header"]').should('have.text', 'Thank you for your order!')
     })
 
-    it.only('T14 Completar checkout con error', () => {
+    it('T14 Completar checkout con error', () => {
         cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
         cy.get('[data-test="shopping-cart-link"]').click()
         cy.get('[data-test="checkout"]').click()

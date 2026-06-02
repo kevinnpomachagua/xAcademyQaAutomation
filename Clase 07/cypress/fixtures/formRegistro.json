@@ -1,0 +1,29 @@
+{
+  "registroValido": {
+    "nombre": "Facundo Pérez",
+    "email": "facundo.perez@xacademy.com",
+    "comentarios": "Datos cargados desde un fixture de Cypress.",
+    "pais": "Argentina",
+    "genero": "Masculino",
+    "intereses": [
+      "Testing",
+      "DevOps"
+    ],
+    "experiencia": 7,
+    "fechaNacimiento": "1995-08-23",
+    "colorFavorito": "#6C3AED"
+  },
+  "registroAlternativo": {
+    "nombre": "Lucía Gómez",
+    "email": "lucia.gomez@xacademy.com",
+    "comentarios": "Segundo set de datos para mostrar data-driven.",
+    "pais": "Chile",
+    "genero": "Femenino",
+    "intereses": [
+      "Desarrollo"
+    ],
+    "experiencia": 3,
+    "fechaNacimiento": "1998-02-10",
+    "colorFavorito": "#22C55E"
+  }
+}

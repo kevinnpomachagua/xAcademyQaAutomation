@@ -9,5 +9,4 @@ Cypress.Commands.add('completarCheckout', (firstName, lastName, postalCode) => {
     cy.get('[data-test="postalCode"]').type(postalCode)
     cy.get('[data-test="continue"]').click()
     cy.url().should('include', '/checkout-step-two.html')
-
 })

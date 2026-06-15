@@ -7,7 +7,6 @@ describe('SauceDemo - Sin comandos personalizados', () => {
 
 
     it('Compra completa con un producto', () => {
-
         // Agregar producto al carrito
         cy.agregarAlCarrito('Sauce Labs Backpack')
         cy.get('.shopping_cart_badge').should('have.text', '1')
@@ -26,10 +25,6 @@ describe('SauceDemo - Sin comandos personalizados', () => {
 
 
     it('Compra completa con dos productos', () => {
-
-        // Login 
-        //cy.login('standard_user', 'secret_sauce')
-
         // Agregar dos productos
         cy.agregarAlCarrito('Sauce Labs Backpack')
         cy.get('.shopping_cart_badge').should('have.text', '1')
@@ -43,20 +38,13 @@ describe('SauceDemo - Sin comandos personalizados', () => {
         // Iniciar checkout
         cy.completarCheckout('Juan', 'Perez', '5000')
 
-
         // Confirmar pedido
         cy.confirmarPedido()
 
     })
 
     // Logout - Tarea para la casa
-    it.only('Logout exitoso después de una compra', () => {
-
-        // Login 
-        //cy.login('standard_user', 'secret_sauce')
-
-        // Agregar producto y completar compra
-
+    it('Logout exitoso después de una compra', () => {
         cy.agregarAlCarrito('Sauce Labs Backpack')
         cy.irAlCarrito()
         cy.completarCheckout('Juan', 'Perez', '5000')

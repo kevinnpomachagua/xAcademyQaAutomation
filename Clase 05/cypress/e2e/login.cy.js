@@ -23,9 +23,7 @@ describe('Login', () => {
     it('Login con campos vacíos', () => {
         cy.get('[data-test="login-button"]').click()
 
-        cy.get('.error-message-container')
-            .should('be.visible')
-            .and('contain.text', 'Epic sadface: Username is required')
+        cy.get('.error-message-container').should('be.visible').and('contain.text', 'Epic sadface: Username is required')
     })
 
     it('T4 Login con usuario bloqueado (locked_out_user)', () => {

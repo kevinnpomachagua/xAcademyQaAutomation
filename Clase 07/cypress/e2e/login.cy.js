@@ -3,13 +3,17 @@ describe('Login', () => {
     beforeEach(() => {
         cy.visit('https://www.saucedemo.com/')
     })
-    it('Login exitoso con usuario estándar', () => {
-        cy.get('[data-test="username"]').type('standard_user')
-        cy.get('[data-test="password"]').type('secret_sauce')
-        cy.get('[data-test="login-button"]').click()
 
+    it.only('Login exitoso con usuario estándar', () => {
+        cy.fixture('example.json').then((example) => {
+            cy.get('[data-test="username"]').type(example.invitado.user)
+            cy.get('[data-test="password"]').type(example.invitado.pass)
+        })
+        cy.get('[data-test="login-button"]').click()
         cy.url().should('include', '/inventory.html')
     })
+
+
     it('Login con contraseña incorrecta', () => {
         cy.get('[data-test="username"]').type('standard_user')
         cy.get('[data-test="password"]').type('secret_sauce2')
@@ -46,8 +50,4 @@ describe('Login', () => {
         cy.get('[data-test="username"]').should('have.value', '')
         cy.get('[data-test="password"]').should('have.value', '')
     })
-
-
-
-
 })

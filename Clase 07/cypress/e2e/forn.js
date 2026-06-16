@@ -37,18 +37,8 @@ describe('Inventario - Sauce Demo', () => {
             cy.get('[data-testid="bp-birthdate"]').type('1992-05-26').should('have.value', '1992-05-26')
 
 
-
-
-
-
-
-
-
-
-
         })
     })
-
 
 
 

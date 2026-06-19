@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Archivos generados por Cypress durante la ejecución (opcional, pero buena práctica)
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Archivos de entorno y variables secretas
+.env
+cypress.env.json
+
+# Archivos del sistema operativo (OS)
+.DS_Store
+Thumbs.db
+
+# Archivos locales de documentación personal (No subir al repositorio grupal)
+docs/

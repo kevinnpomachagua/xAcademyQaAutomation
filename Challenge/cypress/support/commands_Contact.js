@@ -31,10 +31,35 @@ Cypress.Commands.add("index", () => {
 
 Cypress.Commands.add("contact", (contactName, contactEmail, contactPhone, contactSubject, contactDescription) => {
     cy.get('.nav-link[href="/#contact"]').click()
-    cy.get('[data-testid="ContactName"]').type(contactName)
-    cy.get('[data-testid="ContactEmail"]').type(contactEmail)
-    cy.get('[data-testid="ContactPhone"]').type(contactPhone)
-    cy.get('[data-testid="ContactSubject"]').type(contactSubject)
-    cy.get('[data-testid="ContactDescription"]').type(contactDescription)
+    if (contactName) {
+        cy.get('[data-testid="ContactName"]').type(contactName)
+    }
+    if (contactEmail) {
+        cy.get('[data-testid="ContactEmail"]').type(contactEmail)
+    }
+    if (contactPhone) {
+        cy.get('[data-testid="ContactPhone"]').type(contactPhone)
+    }
+    if (contactSubject) {
+        cy.get('[data-testid="ContactSubject"]').type(contactSubject)
+    }
+    if (contactDescription) {
+        cy.get('[data-testid="ContactDescription"]').type(contactDescription)
+    }
     cy.get('.d-grid > .btn').click()
 });
+
+Cypress.Commands.add("verificarDatosExito", (name, subject) => {
+    cy.get('#contact .card-body').within(() => {
+        cy.contains(`Thanks for getting in touch ${name}!`).should('be.visible')
+        cy.contains("We'll get back to you about").should('be.visible')
+        cy.contains(subject).should('be.visible')
+        cy.contains("as soon as possible.").should('be.visible')
+    })
+})
+
+Cypress.Commands.add("verificarDatosError", (expectedAlerts) => {
+    expectedAlerts.forEach(alert => {
+        cy.get('.alert-danger').contains(alert).should('be.visible')
+    })
+})

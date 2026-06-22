@@ -1,8 +1,4 @@
 {
-  "credenciales": {
-    "user": "ADMIN",
-    "pass": "123"
-  },
   "contactFormCases": [
     {
       "id": "CP01",

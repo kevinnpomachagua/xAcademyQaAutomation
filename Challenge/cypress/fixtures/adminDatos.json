@@ -1,0 +1,129 @@
+{
+  "credenciales": {
+    "user": "admin",
+    "pass": "password"
+  },
+  "loginCases": [
+    {
+      "id": "CP01",
+      "descripcion": "Login exitoso con credenciales correctas",
+      "user": "admin",
+      "pass": "password"
+    },
+    {
+      "id": "CP02",
+      "descripcion": "Login fallido con Username incorrecto",
+      "user": "admins",
+      "pass": "password"
+    },
+    {
+      "id": "CP03",
+      "descripcion": "Login fallido con password incorrecto",
+      "user": "admin",
+      "pass": "incorrecta"
+    },
+    {
+      "id": "CP04",
+      "descripcion": "Login fallido con campos vacíos",
+      "user": "",
+      "pass": ""
+    }
+  ],
+  "roomCases": [
+    {
+      "id": "CP05",
+      "descripcion": "Creación exitosa de habitación (Happy Path)",
+      "data": {
+        "roomName": "104",
+        "type": "Twin",
+        "accessible": "false",
+        "roomPrice": "80",
+        "features": {
+          "wifi": true,
+          "tv": true,
+          "radio": false,
+          "refreshments": false,
+          "safe": false,
+          "views": false
+        }
+      }
+    },
+    {
+      "id": "CP06",
+      "descripcion": "Creación fallida de habitación con campos vacíos",
+      "data": {
+        "roomName": "",
+        "type": "Single",
+        "accessible": "false",
+        "roomPrice": "",
+        "features": {
+          "wifi": false,
+          "tv": false,
+          "radio": false,
+          "refreshments": false,
+          "safe": false,
+          "views": false
+        }
+      },
+      "expectedAlert": "Failed to create room"
+    },
+    {
+      "id": "CP07",
+      "descripcion": "Eliminar habitación",
+      "roomName": "104"
+    }
+  ],
+  "roomDetailCases": [
+    {
+      "id": "CP08",
+      "descripcion": "Visualizar detalles y reservas de habitación",
+      "roomName": "101"
+    },
+    {
+      "id": "CP09",
+      "descripcion": "Editar detalles de habitación exitosamente",
+      "roomName": "101",
+      "newPrice": "250"
+    },
+    {
+      "id": "CP10",
+      "descripcion": "Cancelar edición de habitación",
+      "roomName": "101",
+      "newPrice": "999"
+    }
+  ],
+  "reportCases": [
+    {
+      "id": "CP11",
+      "descripcion": "Visualizar reporte de reservas en calendario"
+    },
+    {
+      "id": "CP12",
+      "descripcion": "Navegación del calendario (Today/Back/Next)"
+    }
+  ],
+  "brandingCases": [
+    {
+      "id": "CP13",
+      "descripcion": "Actualizar información de branding exitosamente",
+      "name": "Shady Meadows B&B Updated",
+      "contactPhone": "01234567890"
+    }
+  ],
+  "messageCases": [
+    {
+      "id": "CP14",
+      "descripcion": "Visualizar lista de mensajes y abrir detalle"
+    },
+    {
+      "id": "CP15",
+      "descripcion": "Cerrar detalle de mensaje"
+    }
+  ],
+  "logoutCases": [
+    {
+      "id": "CP16",
+      "descripcion": "Cierre de sesión exitoso"
+    }
+  ]
+}

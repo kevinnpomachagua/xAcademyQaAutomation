@@ -17,4 +17,4 @@ cypress.env.json
 Thumbs.db
 
 # Archivos locales de documentación personal (No subir al repositorio grupal)
-docs/
+
